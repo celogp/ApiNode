@@ -26,5 +26,5 @@ mongoose.connect(strConnection, { useNewUrlParser: true}, () => {
 //Instancia o servidor
 //
 app.listen(PORT, () => {
-     console.log('conected PORT :', PORT);
+     console.log('conectado no servidor na porta :', PORT);
 });
