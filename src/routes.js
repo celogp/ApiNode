@@ -1,3 +1,4 @@
+const middleware = require('./middleware/auth')
 const express = require('express');
 const routes = express.Router();
 
@@ -7,8 +8,8 @@ const ParceiroService = require('./services/Parceiro');
 const ProdutoService = require('./services/Produto');
 const PedidoService = require('./services/Pedido');
 
-routes.get('/estatico/ufs', EstaticoService.showUfs);
-routes.get('/estatico', EstaticoService.showSexo);
+routes.get('/ufs', middleware.checkToken, EstaticoService.showUfs);
+routes.get('/sexo', EstaticoService.showSexo);
 
 routes.get('/usuario', UsuarioService.showAll);
 routes.get('/usuario/:id', UsuarioService.show);

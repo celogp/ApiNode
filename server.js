@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const cfg = require('./src/config/App');
 const requireDir = require('requiredir');
 const cors = require('cors');
+
 const PORT = cfg.PORT;
 const strConnection = cfg.STRCONNECTION;
 const app = express();
@@ -10,6 +11,9 @@ const app = express();
 //Schemas / Models
 //
 requireDir('./src/models');
+// Middleware
+app.use(express.urlencoded(
+{ extended: true }));
 app.use(express.json());
 app.use(cors());
 //
