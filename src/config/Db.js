@@ -1,6 +1,6 @@
 const DB = 'dbStart';
-const US = 'sw1tech';
-const PW = 'ad12min45';
+const US = '*****';
+const PW = '*****';
 const LIMITLINHAS = 10;
 
 module.exports = { DB, US, PW, LIMITLINHAS }; 
